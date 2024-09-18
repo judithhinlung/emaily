@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
@@ -19,7 +18,7 @@ class Header extends Component {
     return (
       <nav>
         <div className="nav-wrapper">
-        <Link
+          <Link
             to={this.props.auth ? '/surveys' : '/'}
             className="left brand-logo"
           >
@@ -37,6 +36,5 @@ class Header extends Component {
 function mapStateToProps({ auth }) {
   return { auth };
 }
-
 
 export default connect(mapStateToProps)(Header);
